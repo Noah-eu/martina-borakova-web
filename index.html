@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mgr. Martina Boráková – psycholog | Praha</title>
+  <meta name="description" content="Mgr. Martina Boráková – psycholog v Praze. Individuální a online psychoterapie pro dospělé a dospívající od 16 let. Soukromě (bez pojištění)." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mgr. Martina Boráková – psycholog | Praha" />
+  <meta property="og:description" content="Individuální a online psychoterapie pro dospělé a dospívající od 16 let. Soukromě (bez pojištění)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="cs_CZ" />
+  <meta property="og:image" content="martina.jpg" />
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#111826;
+      --text:#e8eef7;
+      --muted:#a9b6c7;
+      --line:rgba(255,255,255,.12);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --ok:rgba(125,211,252,.18);
+      --warn:rgba(255,190,92,.16);
+      --danger:rgba(255,105,105,.16);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(125,211,252,.18), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(167,139,250,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 70px}
+    header{
+      display:flex;justify-content:space-between;align-items:center;gap:16px;
+      padding:10px 0 22px;
+    }
+    .brand{display:flex;flex-direction:column;gap:2px}
+    .brand b{font-size:16px;letter-spacing:.2px}
+    .brand span{color:var(--muted);font-size:13px}
+    nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    nav a{
+      text-decoration:none;
+      padding:8px 10px;border:1px solid transparent;border-radius:10px;
+      color:var(--muted);font-size:14px;
+    }
+    nav a:hover{border-color:var(--line);color:var(--text)}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+      nav{justify-content:flex-start}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+    }
+    h1{margin:0 0 10px;font-size:34px;line-height:1.15}
+    .lead{color:var(--muted);font-size:16px;margin:0 0 16px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .chip{
+      font-size:13px;color:var(--muted);
+      padding:8px 10px;border:1px solid var(--line);border-radius:999px;
+      background:rgba(255,255,255,.02);
+    }
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:10px 12px;border-radius:12px;
+      text-decoration:none;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+    .btn:hover{border-color:rgba(125,211,252,.5)}
+    .btn.primary{
+      border-color:transparent;
+      background:linear-gradient(90deg, rgba(125,211,252,.26), rgba(167,139,250,.26));
+    }
+    .portrait{
+      display:flex;flex-direction:column;gap:12px;align-items:stretch;
+      min-height:100%;
+    }
+    .portrait img{
+      width:100%;
+      border-radius:16px;
+      border:1px solid var(--line);
+      aspect-ratio: 4 / 5;
+      object-fit:cover;
+      background:rgba(255,255,255,.02);
+    }
+    section{margin-top:18px}
+    h2{font-size:18px;margin:0 0 10px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width: 860px){.grid2{grid-template-columns:1fr}}
+    .list{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+    .item{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:14px;padding:12px;background:rgba(255,255,255,.02)}
+    .item small{color:var(--muted)}
+    .muted{color:var(--muted)}
+    .k{color:var(--muted);font-size:13px;margin:0}
+    .pill{
+      display:inline-block;
+      font-size:12px;
+      padding:5px 8px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background:rgba(255,255,255,.02);
+      margin-right:6px;
+      margin-bottom:6px;
+    }
+    .note{
+      margin-top:12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      padding:12px;
+      background:rgba(255,255,255,.02);
+    }
+    .note.warn{background:var(--warn)}
+    .note.danger{background:var(--danger)}
+    .footer{margin-top:22px;color:var(--muted);font-size:12px}
+    .sep{height:1px;background:var(--line);margin:14px 0}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <b>Mgr. Martina Boráková</b>
+        <span>Psycholog • Praha</span>
+      </div>
+      <nav>
+        <a href="#o-mne">O mně</a>
+        <a href="#temata">Témata</a>
+        <a href="#sluzby">Služby & ceny</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="card">
+        <h1>Bezpečný prostor pro změnu a porozumění.</h1>
+        <p class="lead">
+          Poskytuji psychologické poradenství a psychoterapii pro dospělé a dospívající od 16 let.
+          V terapii vytvářím klidný, důvěrný a otevřený prostor, ve kterém můžete mluvit o tom, co prožíváte,
+          a společně hledat nové způsoby, jak náročné situace zvládat.
+        </p>
+
+        <div class="chips">
+          <div class="chip">Dospělí & dospívající od 16 let</div>
+          <div class="chip">Individuálně • osobně i online</div>
+          <div class="chip">Soukromě (bez pojištění)</div>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="tel:+420777553772">Zavolat: 777 553 772</a>
+          <a class="btn" href="#kontakt">Kontakt & objednání</a>
+        </div>
+
+        <div class="note warn">
+          <b>Důležité:</b>
+          Pokud jste v akutním ohrožení nebo máte silné sebevražedné myšlenky, volejte <b>112</b> (záchranná služba),
+          případně využijte nonstop Linku první psychické pomoci <b>116 123</b>.
+        </div>
+
+        <p class="k" style="margin-top:12px">
+          Ambulance: Moje já • Hollarovo náměstí 11, Praha • Platba: hotově
+        </p>
+      </div>
+
+      <div class="card portrait">
+        <img src="martina.jpg" alt="Mgr. Martina Boráková" />
+        <div class="muted" style="font-size:13px">
+          Individuální psychoterapie • Online psychoterapie • Psychologické poradenství
+        </div>
+      </div>
+    </div>
+
+    <section id="o-mne" class="grid2">
+      <div class="card">
+        <h2>O mně</h2>
+        <p class="muted" style="margin:0">
+          Jednooborovou psychologii jsem vystudovala v Praze. Od roku 2016 pracuji s lidmi, kteří hledají porozumění
+          a podporu v náročných obdobích života.
+        </p>
+        <p class="muted" style="margin:10px 0 0">
+          Působila jsem v Nemocnici Kladno i v psychologických ambulancích. Mám zkušenosti s prací s dětmi a jejich rodinami,
+          ale poslední roky se více věnuji dospělé klientele. V současné době působím v ambulanci Moje já, kde se zaměřuji
+          na psychoterapii dospělých.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Přístup a vzdělávání</h2>
+        <p class="muted" style="margin:0">
+          Absolvovala jsem psychodynamicky orientovaný terapeutický výcvik a jsem frekventantkou skupinového výcviku
+          psychoanalytického směru ČSPAP.
+        </p>
+        <div class="sep"></div>
+        <p class="muted" style="margin:0">
+          Při práci se opírám hlavně o důvěru a lidský přístup. Věřím, že bezpečný a otevřený prostor umožňuje člověku
+          mluvit o tom, co prožívá, a postupně hledat nové způsoby, jak svůj život lépe zvládat.
+        </p>
+      </div>
+    </section>
+
+    <section id="temata" class="card">
+      <h2>Témata, se kterými klienti přicházejí</h2>
+      <p class="muted" style="margin:0 0 12px">
+        Níže jsou příklady oblastí, které se v terapii často objevují. Nejde o diagnózu – vždy vycházíme z vaší konkrétní situace.
+      </p>
+
+      <div>
+        <span class="pill">úzkosti, obavy</span>
+        <span class="pill">panika, sociální fobie</span>
+        <span class="pill">fobie (např. strach ze zubaře)</span>
+        <span class="pill">hypochondrické obavy</span>
+        <span class="pill">deprese, smutek</span>
+        <span class="pill">nízké sebevědomí</span>
+        <span class="pill">stres, přetížení</span>
+        <span class="pill">vyhoření</span>
+        <span class="pill">životní / vztahová / pracovní krize</span>
+        <span class="pill">emoční bolest</span>
+        <span class="pill">trauma, PTSD</span>
+        <span class="pill">poruchy spánku, nespavost</span>
+        <span class="pill">zhoršená koncentrace</span>
+        <span class="pill">únava</span>
+        <span class="pill">psychosomatické potíže (např. bolesti hlavy)</span>
+        <span class="pill">mezilidské vztahy</span>
+        <span class="pill">dospělé děti z dysfunkčních rodin</span>
+        <span class="pill">důsledky sexuálního zneužívání</span>
+        <span class="pill">sexuální závislost</span>
+        <span class="pill">agrese a impulzivita</span>
+        <span class="pill">obtíže v oblasti osobnosti</span>
+      </div>
+    </section>
+
+    <section id="sluzby" class="card">
+      <h2>Služby & ceny</h2>
+      <p class="muted" style="margin:0 0 10px">Soukromé služby (bez pojištění).</p>
+
+      <ul class="list">
+        <li class="item"><div><b>Psychologické poradenství</b><br><small>Individuálně</small></div><div><b>1 500 Kč</b></div></li>
+        <li class="item"><div><b>Individuální psychoterapie</b><br><small>Osobně</small></div><div><b>1 500 Kč</b></div></li>
+        <li class="item"><div><b>Online psychoterapie</b><br><small>Online</small></div><div><b>1 500 Kč</b></div></li>
+        <li class="item"><div><b>Osobní psychoterapie</b><br><small>Individuálně</small></div><div><b>1 500 Kč</b></div></li>
+        <li class="item"><div><b>Psychoterapie</b><br><small>Individuálně</small></div><div><b>1 500 Kč</b></div></li>
+      </ul>
+
+      <div class="note" style="margin-top:12px;background:var(--ok)">
+        <b>Objednání:</b> telefonicky. Pokud zrovna nemohu telefon zvednout, ozvu se zpět.
+      </div>
+    </section>
+
+    <section id="kontakt" class="grid2">
+      <div class="card">
+        <h2>Kontakt</h2>
+        <p class="muted" style="margin:0 0 10px">
+          Telefon: <a href="tel:+420777553772"><b>777 553 772</b></a><br/>
+          Ambulance: Moje já<br/>
+          Adresa: Hollarovo náměstí 11, Praha
+        </p>
+
+        <p class="muted" style="margin:0">
+          Platba: hotově • Soukromě (bez pojištění)
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Mapa</h2>
+        <p class="muted" style="margin:0 0 10px">
+          Otevřít trasu:
+        </p>
+        <a class="btn" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Hollarovo+n%C3%A1m%C4%9Bst%C3%AD+11+Praha">
+          Otevřít v Google Mapách
+        </a>
+
+        <div class="note" style="margin-top:12px">
+          <span class="muted" style="font-size:13px">
+            Pozn.: Pokud budeš chtít, doplním i e-mail nebo jednoduchý kontaktní formulář (Netlify Forms).
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Mgr. Martina Boráková<br/>
+      <span class="muted">
+        Tento web slouží k informování o službách a objednání. V akutních krizových stavech volejte 112 / 116 123.
+      </span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
