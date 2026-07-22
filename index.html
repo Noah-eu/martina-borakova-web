@@ -3,314 +3,386 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mgr. Martina Boráková – psycholog | Praha</title>
-  <meta name="description" content="Mgr. Martina Boráková – psycholog v Praze. Individuální a online psychoterapie pro dospělé a dospívající od 16 let. Soukromě (bez pojištění)." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Mgr. Martina Boráková – psycholog | Praha" />
-  <meta property="og:description" content="Individuální a online psychoterapie pro dospělé a dospívající od 16 let. Soukromě (bez pojištění)." />
+  <title>Mgr. Martina Boráková – psycholožka | Praha</title>
+  <meta name="description" content="Psychologická a psychoterapeutická péče pro klienty od 16 let v Praze i online." />
+  <meta property="og:title" content="Mgr. Martina Boráková – psycholožka | Praha" />
+  <meta property="og:description" content="Psychologická a psychoterapeutická péče pro klienty od 16 let v Praze i online." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="cs_CZ" />
   <meta property="og:image" content="martina.jpg" />
+  <meta name="theme-color" content="#f4efe8" />
 
   <style>
-    :root{
-  --bg:#f6f8fb;
-  --card:#ffffff;
-  --text:#1f2937;
-  --muted:#6b7280;
-  --line:rgba(0,0,0,.08);
+    :root {
+      --paper: #f4efe8;
+      --paper-deep: #e9dfd4;
+      --card: rgba(255, 253, 249, 0.86);
+      --ink: #2f2b29;
+      --muted: #6f6863;
+      --sage: #849188;
+      --sage-deep: #5f6e65;
+      --rose: #b78479;
+      --line: rgba(47, 43, 41, 0.12);
+      --shadow: 0 24px 70px rgba(75, 61, 52, 0.12);
+    }
 
-  --accent:#38bdf8;   /* jemná modrá */
-  --accent2:#34d399;  /* klidná zelená */
+    * {
+      box-sizing: border-box;
+    }
 
-  --ok:rgba(52,211,153,.12);
-  --warn:rgba(251,191,36,.16);
-  --danger:rgba(248,113,113,.14);
-}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(125,211,252,.18), transparent 60%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(167,139,250,.18), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.65;
+    html {
+      scroll-behavior: smooth;
     }
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 70px}
-    header{
-      display:flex;justify-content:space-between;align-items:center;gap:16px;
-      padding:10px 0 22px;
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 12%, rgba(183, 132, 121, 0.16), transparent 29rem),
+        radial-gradient(circle at 94% 5%, rgba(132, 145, 136, 0.18), transparent 31rem),
+        linear-gradient(145deg, #f8f4ef 0%, var(--paper) 48%, #eee6dd 100%);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
     }
-    .brand{display:flex;flex-direction:column;gap:2px}
-    .brand b{font-size:16px;letter-spacing:.2px}
-    .brand span{color:var(--muted);font-size:13px}
-    nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    nav a{
-      text-decoration:none;
-      padding:8px 10px;border:1px solid transparent;border-radius:10px;
-      color:var(--muted);font-size:14px;
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      border-radius: 999px;
+      filter: blur(1px);
+      pointer-events: none;
     }
-    nav a:hover{border-color:var(--line);color:var(--text)}
-    .hero{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
-      align-items:stretch;
+
+    body::before {
+      width: 260px;
+      height: 260px;
+      top: 18%;
+      left: -150px;
+      border: 1px solid rgba(183, 132, 121, 0.32);
     }
-    @media (max-width: 860px){
-      .hero{grid-template-columns:1fr}
-      nav{justify-content:flex-start}
+
+    body::after {
+      width: 430px;
+      height: 430px;
+      right: -260px;
+      bottom: -160px;
+      border: 1px solid rgba(95, 110, 101, 0.28);
     }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:18px;
-      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+
+    a {
+      color: inherit;
+      text-underline-offset: 0.22em;
+      text-decoration-color: rgba(95, 110, 101, 0.45);
     }
-    h1{margin:0 0 10px;font-size:34px;line-height:1.15}
-    .lead{color:var(--muted);font-size:16px;margin:0 0 16px}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-    .chip{
-      font-size:13px;color:var(--muted);
-      padding:8px 10px;border:1px solid var(--line);border-radius:999px;
-      background:rgba(255,255,255,.02);
+
+    a:hover {
+      text-decoration-color: currentColor;
     }
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:10px 12px;border-radius:12px;
-      text-decoration:none;border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: clamp(24px, 5vw, 76px) 0;
     }
-    .btn:hover{border-color:rgba(125,211,252,.5)}
-    .btn.primary{
-      border-color:transparent;
-      background:linear-gradient(90deg, rgba(125,211,252,.26), rgba(167,139,250,.26));
+
+    .shell {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: clamp(24px, 4vw, 42px);
+      background: rgba(255, 253, 249, 0.64);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
     }
-    .portrait{
-      display:flex;flex-direction:column;gap:12px;align-items:stretch;
-      min-height:100%;
+
+    .shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(115deg, rgba(255, 255, 255, 0.46), transparent 42%),
+        radial-gradient(circle at 80% 18%, rgba(132, 145, 136, 0.11), transparent 22rem);
     }
-    .portrait img{
-      width:100%;
-      border-radius:16px;
-      border:1px solid var(--line);
+
+    .intro {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+      gap: clamp(34px, 6vw, 88px);
+      align-items: center;
+      padding: clamp(30px, 6vw, 78px);
+    }
+
+    .portrait-wrap {
+      position: relative;
+      max-width: 390px;
+      margin: 0 auto;
+    }
+
+    .portrait-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 20px -18px -18px 20px;
+      border: 1px solid rgba(95, 110, 101, 0.34);
+      border-radius: 47% 47% 42% 42% / 36% 36% 28% 28%;
+    }
+
+    .portrait-wrap::after {
+      content: "";
+      position: absolute;
+      width: 82px;
+      height: 82px;
+      right: -42px;
+      top: 22%;
+      border-radius: 50%;
+      background: rgba(183, 132, 121, 0.18);
+    }
+
+    .portrait {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
       aspect-ratio: 4 / 5;
-      object-fit:cover;
-      background:rgba(255,255,255,.02);
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 47% 47% 42% 42% / 36% 36% 28% 28%;
+      box-shadow: 0 24px 58px rgba(75, 61, 52, 0.18);
     }
-    section{margin-top:18px}
-    h2{font-size:18px;margin:0 0 10px}
-    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media (max-width: 860px){.grid2{grid-template-columns:1fr}}
-    .list{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
-    .item{display:flex;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:14px;padding:12px;background:rgba(255,255,255,.02)}
-    .item small{color:var(--muted)}
-    .muted{color:var(--muted)}
-    .k{color:var(--muted);font-size:13px;margin:0}
-    .pill{
-      display:inline-block;
-      font-size:12px;
-      padding:5px 8px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--muted);
-      background:rgba(255,255,255,.02);
-      margin-right:6px;
-      margin-bottom:6px;
+
+    .copy {
+      position: relative;
+      z-index: 1;
     }
-    .note{
-      margin-top:12px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      padding:12px;
-      background:rgba(255,255,255,.02);
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      letter-spacing: -0.035em;
     }
-    .note.warn{background:var(--warn)}
-    .note.danger{background:var(--danger)}
-    .footer{margin-top:22px;color:var(--muted);font-size:12px}
-    .sep{height:1px;background:var(--line);margin:14px 0}
+
+    h1 {
+      margin: 0 0 28px;
+      font-size: clamp(3.2rem, 7vw, 6.4rem);
+      line-height: 0.92;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 2px;
+      margin-top: 24px;
+      background: linear-gradient(90deg, var(--rose), transparent);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .copy p {
+      max-width: 67ch;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.12rem);
+    }
+
+    .copy p + p {
+      margin-top: 18px;
+    }
+
+    .details {
+      position: relative;
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 1px;
+      background: var(--line);
+      border-top: 1px solid var(--line);
+    }
+
+    .panel {
+      position: relative;
+      min-width: 0;
+      padding: clamp(30px, 5vw, 62px);
+      background: rgba(255, 253, 249, 0.78);
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: clamp(30px, 5vw, 62px);
+      width: 52px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--sage);
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+    }
+
+    .price {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--sage-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.35rem, 6vw, 4.8rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
+    }
+
+    .panel p {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .panel p + p {
+      margin-top: 15px;
+    }
+
+    .contact-lines {
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-lines a {
+      overflow-wrap: anywhere;
+      font-weight: 600;
+    }
+
+    .address {
+      margin-top: 30px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 820px) {
+      .intro,
+      .details {
+        grid-template-columns: 1fr;
+      }
+
+      .intro {
+        padding-top: 34px;
+      }
+
+      .portrait-wrap {
+        width: min(78vw, 350px);
+      }
+
+      .copy {
+        text-align: left;
+      }
+
+      .details {
+        gap: 1px;
+      }
+
+      .panel + .panel {
+        border-top: 1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        width: min(100% - 20px, 1120px);
+        padding: 10px 0;
+      }
+
+      .shell {
+        border-radius: 24px;
+      }
+
+      .intro,
+      .panel {
+        padding: 26px 22px;
+      }
+
+      .portrait-wrap {
+        width: min(82vw, 310px);
+      }
+
+      h1 {
+        font-size: clamp(3rem, 17vw, 4.6rem);
+      }
+
+      .price {
+        font-size: clamp(2.3rem, 14vw, 3.7rem);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <b>Mgr. Martina Boráková</b>
-        <span>Psycholog • Praha</span>
-      </div>
-      <nav>
-        <a href="#o-mne">O mně</a>
-        <a href="#temata">Témata</a>
-        <a href="#sluzby">Služby & ceny</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </header>
-
-    <div class="hero">
-      <div class="card">
-        <h1>Bezpečný prostor pro změnu a porozumění.</h1>
-        <p class="lead">
-          Poskytuji psychologické poradenství a psychoterapii pro dospělé a dospívající od 16 let.
-          V terapii vytvářím klidný, důvěrný a otevřený prostor, ve kterém můžete mluvit o tom, co prožíváte,
-          a společně hledat nové způsoby, jak náročné situace zvládat.
-        </p>
-
-        <div class="chips">
-          <div class="chip">Dospělí & dospívající od 16 let</div>
-          <div class="chip">Individuálně • osobně i online</div>
-          <div class="chip">Soukromě (bez pojištění)</div>
+  <main class="page">
+    <article class="shell">
+      <section class="intro">
+        <div class="portrait-wrap">
+          <img class="portrait" src="martina.jpg" alt="Mgr. Martina Boráková" />
         </div>
 
-        <div class="ctaRow">
-          <a class="btn primary" href="tel:+420777553772">Zavolat: 777 553 772</a>
-          <a class="btn" href="#kontakt">Kontakt & objednání</a>
+        <div class="copy">
+          <h1>O mně</h1>
+
+          <p>
+            Jsem psycholožka s 10ti letou praxí. V terapii se orientuji psychodynamicky, aktuálně jsem frekventantkou výcviku skupinové psychoanalýzy. Mým pracovním nástrojem je klasický terapeutický rozhovor. Přijímám klienty od 16ti let.
+          </p>
+
+          <p>
+            V terapii vytvářím klidný, důvěrný a otevřený prostor. Můžete svobodně mluvit o tom, co prožíváte, společně zkusíme hledat nové způsoby, jak náročné situace zvládat.
+          </p>
+
+          <p>
+            Můžete se na mě obrátit, pokud se trápíte s úzkostmi, strachy, depresí, poruchami spánku, psychosomatickými potížemi, nízkým sebevědomím, nadměrným stresem, přetížením/vyhořením, jste v životní / vztahové / pracovní krizi.
+          </p>
+        </div>
+      </section>
+
+      <section class="details">
+        <div class="panel">
+          <h2>Cena sezení:</h2>
+          <p class="price">1500/ 50 min</p>
+          <p>možnost domluvit se i na online terapii</p>
+          <p>Omluvy ze sezení prosím 48h před ním, jinak je nutné uhradit plnou částku.</p>
         </div>
 
-        <div class="note warn">
-          <b>Důležité:</b>
-          Pokud jste v akutním ohrožení nebo máte silné sebevražedné myšlenky, volejte <b>112</b> (záchranná služba),
-          případně využijte nonstop Linku první psychické pomoci <b>116 123</b>.
+        <div class="panel">
+          <h2>Kontakt:</h2>
+
+          <div class="contact-lines">
+            <p>
+              Objednat se můžete přes email
+              <a href="mailto:borakova.martina@seznam.cz">borakova.martina@seznam.cz</a>
+            </p>
+
+            <p>nebo</p>
+
+            <p>
+              tel.: <a href="tel:+420777553772">777 553 772</a>, pokud telefon nezvednu, zavolám vám zpět.
+            </p>
+          </div>
+
+          <div class="address">
+            <p>Ambulance Moje já, zvonek 1. patro</p>
+            <p>Adresa: Hollarovo náměstí 11, Praha 3, metro Želivského.</p>
+          </div>
         </div>
-
-        <p class="k" style="margin-top:12px">
-          Ambulance: Moje já • Hollarovo náměstí 11, Praha • Platba: hotově
-        </p>
-      </div>
-
-      <div class="card portrait">
-        <img src="martina.jpg" alt="Mgr. Martina Boráková" />
-        <div class="muted" style="font-size:13px">
-          Individuální psychoterapie • Online psychoterapie • Psychologické poradenství
-        </div>
-      </div>
-    </div>
-
-    <section id="o-mne" class="grid2">
-      <div class="card">
-        <h2>O mně</h2>
-        <p class="muted" style="margin:0">
-          Jednooborovou psychologii jsem vystudovala v Praze. Od roku 2016 pracuji s lidmi, kteří hledají porozumění
-          a podporu v náročných obdobích života.
-        </p>
-        <p class="muted" style="margin:10px 0 0">
-          Působila jsem v Nemocnici Kladno i v psychologických ambulancích. Mám zkušenosti s prací s dětmi a jejich rodinami,
-          ale poslední roky se více věnuji dospělé klientele. V současné době působím v ambulanci Moje já, kde se zaměřuji
-          na psychoterapii dospělých.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Přístup a vzdělávání</h2>
-        <p class="muted" style="margin:0">
-          Absolvovala jsem psychodynamicky orientovaný terapeutický výcvik a jsem frekventantkou skupinového výcviku
-          psychoanalytického směru ČSPAP.
-        </p>
-        <div class="sep"></div>
-        <p class="muted" style="margin:0">
-          Při práci se opírám hlavně o důvěru a lidský přístup. Věřím, že bezpečný a otevřený prostor umožňuje člověku
-          mluvit o tom, co prožívá, a postupně hledat nové způsoby, jak svůj život lépe zvládat.
-        </p>
-      </div>
-    </section>
-
-    <section id="temata" class="card">
-      <h2>Témata, se kterými klienti přicházejí</h2>
-      <p class="muted" style="margin:0 0 12px">
-        Níže jsou příklady oblastí, které se v terapii často objevují. Nejde o diagnózu – vždy vycházíme z vaší konkrétní situace.
-      </p>
-
-      <div>
-        <span class="pill">úzkosti, obavy</span>
-        <span class="pill">panika, sociální fobie</span>
-        <span class="pill">fobie (např. strach ze zubaře)</span>
-        <span class="pill">hypochondrické obavy</span>
-        <span class="pill">deprese, smutek</span>
-        <span class="pill">nízké sebevědomí</span>
-        <span class="pill">stres, přetížení</span>
-        <span class="pill">vyhoření</span>
-        <span class="pill">životní / vztahová / pracovní krize</span>
-        <span class="pill">emoční bolest</span>
-        <span class="pill">trauma, PTSD</span>
-        <span class="pill">poruchy spánku, nespavost</span>
-        <span class="pill">zhoršená koncentrace</span>
-        <span class="pill">únava</span>
-        <span class="pill">psychosomatické potíže (např. bolesti hlavy)</span>
-        <span class="pill">mezilidské vztahy</span>
-        <span class="pill">dospělé děti z dysfunkčních rodin</span>
-        <span class="pill">důsledky sexuálního zneužívání</span>
-        <span class="pill">sexuální závislost</span>
-        <span class="pill">agrese a impulzivita</span>
-        <span class="pill">obtíže v oblasti osobnosti</span>
-      </div>
-    </section>
-
-    <section id="sluzby" class="card">
-      <h2>Služby & ceny</h2>
-      <p class="muted" style="margin:0 0 10px">Soukromé služby (bez pojištění).</p>
-
-      <ul class="list">
-        <li class="item"><div><b>Psychologické poradenství</b><br><small>Individuálně</small></div><div><b>1 500 Kč</b></div></li>
-        <li class="item"><div><b>Individuální psychoterapie</b><br><small>Osobně</small></div><div><b>1 500 Kč</b></div></li>
-        <li class="item"><div><b>Online psychoterapie</b><br><small>Online</small></div><div><b>1 500 Kč</b></div></li>
-        <li class="item"><div><b>Osobní psychoterapie</b><br><small>Individuálně</small></div><div><b>1 500 Kč</b></div></li>
-        <li class="item"><div><b>Psychoterapie</b><br><small>Individuálně</small></div><div><b>1 500 Kč</b></div></li>
-      </ul>
-
-      <div class="note" style="margin-top:12px;background:var(--ok)">
-        <b>Objednání:</b> telefonicky. Pokud zrovna nemohu telefon zvednout, ozvu se zpět.
-      </div>
-    </section>
-
-    <section id="kontakt" class="grid2">
-  <div class="card">
-    <h2>Kontakt</h2>
-    <p class="muted" style="margin:0 0 10px">
-      Telefon: <a href="tel:+420777553772"><b>777 553 772</b></a><br/>
-      E-mail: <a href="mailto:borakova.martina@seznam.cz">borakova.martina@seznam.cz</a><br/>
-      Ambulance: Moje já<br/>
-      Adresa: Hollarovo náměstí 11, Praha
-    </p>
-
-        <p class="muted" style="margin:0">
-          Platba: hotově • Soukromě (bez pojištění)
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Mapa</h2>
-        <p class="muted" style="margin:0 0 10px">
-          Otevřít trasu:
-        </p>
-        <a class="btn" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=Hollarovo+n%C3%A1m%C4%9Bst%C3%AD+11+Praha">
-          Otevřít v Google Mapách
-        </a>
-
-        <div class="note" style="margin-top:12px">
-          <span class="muted" style="font-size:13px">
-            Pozn.: Pokud budeš chtít, doplním i e-mail nebo jednoduchý kontaktní formulář (Netlify Forms).
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <div class="footer">
-      © <span id="y"></span> Mgr. Martina Boráková<br/>
-      <span class="muted">
-        Tento web slouží k informování o službách a objednání. V akutních krizových stavech volejte 112 / 116 123.
-      </span>
-    </div>
-  </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+      </section>
+    </article>
+  </main>
 </body>
 </html>
