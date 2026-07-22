@@ -22,14 +22,14 @@
       --cream-deep: #f6efdb;
       --yellow: #f5c93d;
       --yellow-soft: #ffe890;
-      --blue: #1e5b87;
-      --blue-deep: #163f5e;
-      --blue-soft: #dceaf3;
-      --ink: #17384f;
-      --muted: #4f6573;
+      --rose: #b56f7d;
+      --rose-deep: #7f4654;
+      --rose-soft: #f1dce1;
+      --ink: #4a2d35;
+      --muted: #735861;
       --white: #fffef9;
-      --line: rgba(30, 91, 135, 0.14);
-      --shadow: 0 28px 85px rgba(22, 63, 94, 0.16);
+      --line: rgba(181, 111, 125, 0.18);
+      --shadow: 0 28px 85px rgba(127, 70, 84, 0.18);
     }
 
     * {
@@ -46,7 +46,7 @@
       color: var(--ink);
       background:
         radial-gradient(circle at 6% 10%, rgba(245, 201, 61, 0.28), transparent 24rem),
-        radial-gradient(circle at 94% 5%, rgba(30, 91, 135, 0.17), transparent 30rem),
+        radial-gradient(circle at 94% 5%, rgba(181, 111, 125, 0.18), transparent 30rem),
         linear-gradient(135deg, var(--cream) 0%, #fffdf5 48%, var(--cream-deep) 100%);
       font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
       line-height: 1.72;
@@ -75,7 +75,7 @@
       height: 240px;
       right: -90px;
       top: 31%;
-      background: rgba(30, 91, 135, 0.07);
+      background: rgba(181, 111, 125, 0.08);
     }
 
     a {
@@ -120,7 +120,7 @@
       align-items: center;
       padding: clamp(36px, 6vw, 86px);
       background:
-        linear-gradient(102deg, rgba(220, 234, 243, 0.34), transparent 45%),
+        linear-gradient(102deg, rgba(241, 220, 225, 0.44), transparent 45%),
         var(--white);
     }
 
@@ -148,7 +148,7 @@
       position: absolute;
       inset: 0 28px 30px 0;
       border-radius: 48% 48% 34% 34% / 33% 33% 26% 26%;
-      background: var(--blue);
+      background: var(--rose);
       transform: rotate(-2.4deg);
     }
 
@@ -175,7 +175,7 @@
       object-position: center top;
       border: 10px solid var(--white);
       border-radius: 48% 48% 34% 34% / 33% 33% 26% 26%;
-      box-shadow: 0 28px 65px rgba(22, 63, 94, 0.24);
+      box-shadow: 0 28px 65px rgba(127, 70, 84, 0.24);
     }
 
     .copy {
@@ -196,7 +196,7 @@
       position: relative;
       display: inline-block;
       margin-bottom: 34px;
-      color: var(--blue);
+      color: var(--rose);
       font-size: clamp(4.4rem, 9vw, 8rem);
       line-height: 0.86;
     }
@@ -229,7 +229,7 @@
     .copy p:first-of-type::first-letter {
       float: left;
       margin: 0.1em 0.13em 0 0;
-      color: var(--blue);
+      color: var(--rose);
       font-family: "DM Serif Display", Georgia, serif;
       font-size: 3.3em;
       line-height: 0.76;
@@ -252,7 +252,7 @@
 
     .price-panel {
       overflow: hidden;
-      color: var(--blue-deep);
+      color: var(--rose-deep);
       background:
         radial-gradient(circle at 86% 15%, rgba(255, 255, 255, 0.45), transparent 11rem),
         var(--yellow);
@@ -273,7 +273,7 @@
       color: var(--white);
       background:
         radial-gradient(circle at 88% 18%, rgba(245, 201, 61, 0.18), transparent 16rem),
-        linear-gradient(135deg, var(--blue) 0%, var(--blue-deep) 100%);
+        linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
     }
 
     h2 {
@@ -296,7 +296,7 @@
       font-size: clamp(5rem, 10.4vw, 9.3rem);
       line-height: 0.78;
       letter-spacing: -0.07em;
-      color: var(--blue-deep);
+      color: var(--rose-deep);
       text-wrap: balance;
     }
 
