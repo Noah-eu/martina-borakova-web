@@ -292,7 +292,7 @@
       display: inline-block;
       margin-bottom: 34px;
       color: var(--rose);
-      font-size: clamp(4.4rem, 9vw, 8rem);
+      font-size: clamp(3.6rem, 7.4vw, 6.7rem);
       line-height: 0.86;
     }
 
@@ -319,7 +319,7 @@
       font-weight: 500;
     }
 
-    .copy p:first-of-type::first-letter {
+    .copy .lead::first-letter {
       float: left;
       margin: 0.1em 0.13em 0 0;
       color: var(--rose);
@@ -329,6 +329,48 @@
     }
 
     .copy p + p { margin-top: 21px; }
+
+    .eyebrow {
+      margin-bottom: 14px;
+      color: var(--rose-deep);
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 52px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      color: var(--white);
+      background: var(--rose-deep);
+      box-shadow: 0 12px 28px rgba(127, 70, 84, 0.2);
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(127, 70, 84, 0.26);
+    }
+
+    .cta-button:focus-visible {
+      outline: 3px solid var(--yellow);
+      outline-offset: 4px;
+    }
 
     .details {
       display: grid;
@@ -411,6 +453,10 @@
       gap: 17px;
     }
 
+    .contact-intro {
+      margin-bottom: 28px;
+    }
+
     .contact-lines a {
       color: var(--yellow-soft);
       overflow-wrap: anywhere;
@@ -458,7 +504,7 @@
         right: -4px;
       }
 
-      h1 { font-size: clamp(4rem, 23vw, 6rem); }
+      h1 { font-size: clamp(3rem, 14vw, 4.5rem); }
       .copy p { font-size: 1.08rem; }
       h2 { font-size: clamp(2.5rem, 13vw, 3.7rem); }
     }
@@ -478,19 +524,24 @@
         </div>
 
         <div class="copy">
-          <h1>O mně</h1>
+          <p class="eyebrow">Mgr. Martina Boráková · psycholožka</p>
+          <h1>Psychoterapie</h1>
 
-          <p>
-            Jsem psycholožka s 10ti letou praxí. V terapii se orientuji psychodynamicky, aktuálně jsem frekventantkou výcviku skupinové psychoanalýzy. Mým pracovním nástrojem je klasický terapeutický rozhovor. Přijímám klienty od 16ti let.
+          <p class="lead">
+            Nabízím individuální psychoterapii v Praze 3, nedaleko metra Želivského, i online. Obrátit se na mě můžete, pokud prožíváte úzkosti, strachy, depresi, poruchy spánku, psychosomatické potíže, nízké sebevědomí, nadměrný stres či vyhoření nebo se nacházíte v životní, vztahové či pracovní krizi.
           </p>
 
           <p>
-            V terapii vytvářím klidný, důvěrný a otevřený prostor. Můžete svobodně mluvit o tom, co prožíváte, společně zkusíme hledat nové způsoby, jak náročné situace zvládat.
+            V terapii vytvářím klidný, důvěrný a otevřený prostor, ve kterém můžete svobodně mluvit o tom, co prožíváte. Společně budeme hledat porozumění vašim obtížím a nové způsoby, jak náročné situace zvládat.
           </p>
 
           <p>
-            Můžete se na mě obrátit, pokud se trápíte s úzkostmi, strachy, depresí, poruchami spánku, psychosomatickými potížemi, nízkým sebevědomím, nadměrným stresem, přetížením/vyhořením, jste v životní / vztahové / pracovní krizi.
+            Jsem psycholožka s desetiletou praxí. V terapii se orientuji psychodynamicky a aktuálně jsem frekventantkou výcviku skupinové psychoanalýzy. Mým pracovním nástrojem je klasický terapeutický rozhovor. Přijímám klienty od 16 let.
           </p>
+
+          <div class="cta-row">
+            <a class="cta-button" href="mailto:borakova.martina@seznam.cz?subject=Objedn%C3%A1n%C3%AD%20prvn%C3%AD%20konzultace">Objednat první konzultaci</a>
+          </div>
         </div>
       </section>
 
@@ -504,6 +555,8 @@
 
         <div class="panel contact-panel">
           <h2>Kontakt:</h2>
+
+          <p class="contact-intro">Pokud zvažujete psychoterapii nebo si nejste jistí, zda je pro vás vhodná, napište mi. Společně zjistíme, zda vám mohu být nápomocná, a domluvíme se na dalším postupu.</p>
 
           <div class="contact-lines">
             <p>
