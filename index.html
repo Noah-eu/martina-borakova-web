@@ -293,7 +293,7 @@
     h1 {
       position: relative;
       display: inline-block;
-      margin-bottom: 34px;
+      margin-bottom: 24px;
       color: var(--rose);
       font-size: clamp(3.6rem, 6.4vw, 5.8rem);
       line-height: 0.86;
@@ -348,7 +348,7 @@
       flex-wrap: wrap;
       gap: 14px;
       align-items: center;
-      margin-top: 30px;
+      margin-bottom: 26px;
     }
 
     .cta-button {
@@ -363,6 +363,17 @@
       font-weight: 800;
       text-decoration: none;
       transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .cta-secondary {
+      color: var(--rose-deep);
+      background: var(--rose-soft);
+    }
+
+    .cta-price {
+      color: var(--rose-deep);
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .cta-button:hover {
@@ -480,7 +491,7 @@
 
     @media (max-width: 900px) {
       .intro,
-      .details { grid-template-columns: 1fr; }
+      .details { grid-template-columns: minmax(0, 1fr); }
       .intro { gap: 48px; }
       .portrait-wrap { width: min(78vw, 390px); }
       .price { max-width: 760px; }
@@ -497,17 +508,19 @@
       .intro,
       .panel { padding: 30px 23px; }
 
-      .intro { gap: 38px; }
+      .intro { gap: 22px; }
       .intro::before { display: none; }
-      .portrait-wrap { width: min(82vw, 330px); }
+      .portrait-wrap { width: min(56vw, 184px); }
+      .cta-row { gap: 10px; }
+      .cta-button { padding: 10px 14px; }
 
       .portrait-wrap::after {
-        width: 86px;
-        height: 86px;
+        width: 54px;
+        height: 54px;
         right: -4px;
       }
 
-      h1 { font-size: clamp(3rem, 14vw, 4.5rem); }
+      h1 { font-size: clamp(2.5rem, 12.5vw, 4.5rem); }
       .copy p { font-size: 1.08rem; }
       h2 { font-size: clamp(2.5rem, 13vw, 3.7rem); }
     }
@@ -530,6 +543,12 @@
           <p class="eyebrow">Mgr. Martina Boráková · psycholožka</p>
           <h1>Psychoterapie</h1>
 
+          <div class="cta-row">
+            <a class="cta-button" href="sms:+420777553772">Napsat SMS</a>
+            <a class="cta-button cta-secondary" href="mailto:borakova.martina@seznam.cz?subject=Objedn%C3%A1n%C3%AD%20prvn%C3%AD%20konzultace">Napsat e-mail</a>
+            <span class="cta-price">1&nbsp;500&nbsp;Kč / 50&nbsp;min</span>
+          </div>
+
           <p class="lead">
             Nabízím individuální psychoterapii v Praze 3, nedaleko metra Želivského, i online. Obrátit se na mě můžete, pokud prožíváte úzkosti, strachy, depresi, poruchy spánku, psychosomatické potíže, nízké sebevědomí, nadměrný stres či vyhoření nebo se nacházíte v životní, vztahové či pracovní krizi.
           </p>
@@ -541,17 +560,13 @@
           <p>
             Jsem psycholožka s desetiletou praxí. V terapii se orientuji psychodynamicky a aktuálně jsem frekventantkou výcviku skupinové psychoanalýzy. Mým pracovním nástrojem je klasický terapeutický rozhovor. Přijímám klienty od 16 let.
           </p>
-
-          <div class="cta-row">
-            <a class="cta-button" href="mailto:borakova.martina@seznam.cz?subject=Objedn%C3%A1n%C3%AD%20prvn%C3%AD%20konzultace">Objednat první konzultaci</a>
-          </div>
         </div>
       </section>
 
       <section class="details">
         <div class="panel price-panel">
           <h2>Cena sezení:</h2>
-          <p class="price"><span class="notice-emphasis">1500 / 50 min.</span></p>
+          <p class="price"><span class="notice-emphasis">1&nbsp;500&nbsp;Kč / 50&nbsp;min.</span></p>
           <p>možnost domluvit se i na online terapii</p>
           <p>Omluvy ze sezení prosím <span class="notice-emphasis">48 hod.</span> před ním, jinak je nutné uhradit plnou částku.</p>
         </div>
